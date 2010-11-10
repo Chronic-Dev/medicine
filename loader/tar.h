@@ -1,3 +1,6 @@
+// by elliot kroo (http://elliot.kroo.net/)
+// thanks!
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
