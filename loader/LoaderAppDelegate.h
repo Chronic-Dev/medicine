@@ -22,7 +22,7 @@
 
 @interface LoaderAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;
-	LoaderVC *_loader;
+	UINavigationController *navigationController;
 	BOOL _reboot;
 }
 

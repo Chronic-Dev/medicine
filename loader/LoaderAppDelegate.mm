@@ -36,12 +36,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	_loader = [[LoaderVC alloc] initWithStyle:UITableViewStyleGrouped];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_loader];
+	LoaderVC *loader = [[LoaderVC alloc] initWithStyle:UITableViewStyleGrouped];
+	navigationController = [[UINavigationController alloc] initWithRootViewController:loader];
 	
-	[window addSubview:[nav view]];
+	[window addSubview:[navigationController view]];
 	[window makeKeyAndVisible]; 
-	[nav release];
+	[loader release];
 	
 	return YES;
 }
@@ -74,7 +74,7 @@
 }
 
 - (void)dealloc {
-	[_loader release];
+	[navigationController release];
 	[window release];
 	[super dealloc];
 }
