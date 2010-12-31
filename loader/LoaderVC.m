@@ -54,7 +54,6 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	NSLog(@"=> Hello!");
 
 	self.title = kTitle;
 	
