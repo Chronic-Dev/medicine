@@ -47,7 +47,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	system("su mobile -c uicache");
+	system("su mobile -c /usr/bin/sbreload");
 	notify_post("com.apple.mobile.application_installed");
 	sleep(2);
 	if(self.reboot) {
@@ -61,7 +61,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
 	if([[[UIDevice currentDevice] systemVersion] intValue] >= 4) {
 		// no backgrounding for you!
-		system("su mobile -c uicache");
+		system("su mobile -c /usr/bin/sbreload");
 		notify_post("com.apple.mobile.application_installed");
 		sleep(2);
 		if(self.reboot) {
